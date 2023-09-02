@@ -1,0 +1,12 @@
+endpoints:
+  - name: Teapot endpoint
+    endpoint: teapot
+    rc: 418
+  - name: Ok endpoint
+    endpoint: ok
+    rc: 200
+  - name: Dynamic endpoint
+    endpoint: dynamic
+    rc: 0
+server:
+  port: 80
