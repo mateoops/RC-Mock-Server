@@ -10,7 +10,9 @@ import (
 func main() {
 	ymlConfig := helpers.ReadConfigurationFromYaml()
 
-	//gin.SetMode(gin.ReleaseMode)
+	if !ymlConfig.Server.Debug {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	router := gin.Default()
 
 	for _, endpoint := range ymlConfig.Endpoints {
@@ -26,6 +28,5 @@ func main() {
 			c.AbortWithStatus(rcStatus)
 		})
 	}
-
 	router.Run(":" + strconv.Itoa(ymlConfig.Server.Port))
 }

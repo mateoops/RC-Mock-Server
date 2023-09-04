@@ -10,3 +10,4 @@ endpoints:
     rc: 0
 server:
   port: 80
+  debug: true

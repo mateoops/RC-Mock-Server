@@ -13,7 +13,8 @@ type Config struct {
 }
 
 type ServerConfig struct {
-	Port int `yaml:"port"`
+	Port  int  `yaml:"port"`
+	Debug bool `yaml:"debug"`
 }
 
 type EndpointConfig struct {
